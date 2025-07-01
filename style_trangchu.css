@@ -6,12 +6,110 @@ body {
 }
 
 h1 {
+
     position: absolute;
     top: 90px; /* Điều chỉnh lại vị trí của H1 để không bị các button che mất */
     left: 20px;
+
+    margin-top: 40px;
+
     color: #d63384;
     font-size: 32px;
+    text-align: center;
+  
+  margin: 0;
+  padding: 0;
+  background-color: #ffe6f0; /* hồng nhẹ */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
 }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.tieude {
+  color: #d63384;
+  font-size: 28px;
+  margin: 0;
+}
+
+.auth-controls {
+  display: flex;
+  align-items: center;
+}
+
+.logout-btn, .dropbtn {
+  padding: 8px 16px;
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.logout-btn:hover, .dropbtn:hover {
+  background-color: #e055a0;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 120px;
+  right: 0;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  z-index: 1;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.dropdown-content a {
+  color: #d63384;
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ffe6f0;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Form */
+.form-container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
+}
+
+.form-box {
+  background-color: white;
+  padding: 20px;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.form-box h2 {
+  margin-top: 0;
+  color: #d63384;
+}
+
 
 /* CSS cho thanh điều hướng */
 .main-nav {
@@ -37,3 +135,32 @@ h1 {
 .nav-button:hover {
     background-color: #a32264; /* Màu nền nút khi di chuột qua */
 }
+=======
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.form-box button {
+  width: 100%;
+  padding: 10px;
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.form-box button:hover {
+  background-color: #e055a0;
+}
+
+.hidden {
+  display: none;
+}
+
+

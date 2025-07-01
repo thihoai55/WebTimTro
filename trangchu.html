@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
+
     <meta charset="UTF-8">
     <title>Trang Chủ</title>
     <link rel="stylesheet" href="style_trangchu.css">
 </head>
 <body>
+
     <nav class="main-nav">
         <a href="#" class="nav-button">Tìm kiếm</a>
         <a href="#" class="nav-button">Địa chỉ</a>
@@ -14,5 +16,76 @@
     
     <h1>NH GROUP</h1>
     
+
+    <div id="header-include"></div>
+    <h1>Trang Chủ</h1>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        fetch('Header.html')
+            .then(response => {
+                if (!response.ok) throw new Error('Không tìm thấy Header.html');
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('header-include').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Không thể tải Header.html:', error);
+            });
+    });
+</script>
+
+  <meta charset="UTF-8">
+  <title>Trang Chủ</title>
+  <link rel="stylesheet" href="style_trangchu.css">
+</head>
+<body>
+  <div class="header">
+    <h1 class="tieude">Trang Chủ</h1>
+
+    <div class="auth-controls">
+      <div class="dropdown">
+        <button class="dropbtn">Tài khoản ▾</button>
+        <div class="dropdown-content">
+          <a href="#" onclick="showForm('login')">Đăng nhập</a>
+          <a href="#" onclick="showForm('register')">Đăng ký</a>
+        </div>
+      </div>
+      <button class="logout-btn">Đăng xuất</button>
+    </div>
+  </div>
+
+  <div class="form-container" id="formContainer">
+    <div id="loginForm" class="form-box hidden">
+      <h2>Đăng nhập</h2>
+      <input type="text" placeholder="Tên đăng nhập">
+      <input type="password" placeholder="Mật khẩu">
+      <button>Đăng nhập</button>
+    </div>
+
+    <div id="registerForm" class="form-box hidden">
+      <h2>Đăng ký</h2>
+      <input type="text" placeholder="Họ tên">
+      <input type="text" placeholder="Tên đăng nhập">
+      <input type="password" placeholder="Mật khẩu">
+      <button>Đăng ký</button>
+    </div>
+  </div>
+
+  <script>
+    function showForm(type) {
+      const loginForm = document.getElementById('loginForm');
+      const registerForm = document.getElementById('registerForm');
+
+      if (type === 'login') {
+        loginForm.classList.remove('hidden');
+        registerForm.classList.add('hidden');
+      } else {
+        registerForm.classList.remove('hidden');
+        loginForm.classList.add('hidden');
+      }
+    }
+  </script>
 </body>
 </html>
+
