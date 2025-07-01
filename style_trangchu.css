@@ -1,16 +1,18 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #ffe6f0; /* nền hồng nhẹ */
+    background-color: #ffe6f0; /* màu hồng nhẹ */
     font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    height: 100vh;
 }
 
 h1 {
+
+    position: absolute;
+    top: 90px; /* Điều chỉnh lại vị trí của H1 để không bị các button che mất */
+    left: 20px;
+
     margin-top: 40px;
+
     color: #d63384;
     font-size: 32px;
     text-align: center;
@@ -108,6 +110,32 @@ h1 {
   color: #d63384;
 }
 
+
+/* CSS cho thanh điều hướng */
+.main-nav {
+    background-color: #f8c8dc; /* Màu nền cho thanh điều hướng */
+    padding: 10px 20px;
+    display: flex; /* Dùng flexbox để các nút nằm ngang */
+    justify-content: center; /* THAY ĐỔI TẠI ĐÂY: Căn các nút vào giữa */
+    gap: 15px; /* Khoảng cách giữa các nút */
+    width: 100%;
+    box-sizing: border-box; /* Đảm bảo padding không làm tăng chiều rộng */
+}
+
+.nav-button {
+    background-color: #d63384; /* Màu nền nút */
+    color: white; /* Màu chữ nút */
+    padding: 10px 15px;
+    text-decoration: none; /* Bỏ gạch chân link */
+    border-radius: 5px; /* Bo góc nút */
+    font-weight: bold;
+    transition: background-color 0.3s ease; /* Hiệu ứng chuyển màu khi hover */
+}
+
+.nav-button:hover {
+    background-color: #a32264; /* Màu nền nút khi di chuột qua */
+}
+=======
 input {
   width: 100%;
   padding: 10px;
@@ -134,4 +162,5 @@ input {
 .hidden {
   display: none;
 }
+
 
