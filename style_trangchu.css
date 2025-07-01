@@ -10,9 +10,8 @@ body {
 }
 
 h1 {
-    position: absolute;
-    top: 20px;
-    left: 20px;
+    margin-top: 40px;
     color: #d63384;
     font-size: 32px;
+    text-align: center;
 }
